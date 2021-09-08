@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories = true) %}
+    {% if messages %}
+        {% for cat,msg in messages %}
+            {% if cat == 'auth-success' %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ msg }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<header class="row">
+    <div class="col-md-6" id="header-text">
+        <h2>Let us help find your favorite player's stats!</h2>
+        <h5>Whether you want to find the stats on infielders, outfielders, or pitchers.</h5>
+        <p>Just Sign Up, and start searching!</p>
+        <div>
+            <button class="btn btn-primary col-md-3"><a href="{{ url_for('auth.signup') }}" id="btn-text">Sign Up Here</a></button>
+            <button class="btn btn-primary col-md-3"><a href="{{ url_for('auth.signin') }}" id="btn-text">Sign In Here</a></button>
+        </div>
+    </div>
+    <!-- Header Image Here -->
+    <div class="col-12 col-md-6">
+        <img class="header-image" src="../../static/images/Baseball-bat.jpeg">
+    </div>
+</header>
+
+<!-- Header section end -->
+
+<!-- Start of Middle Section -->
+<section class="row" id="middle-section">
+    <div class="col-12" id="middle-text">
+        <h1>Save your favorite players to your account!</h1>
+        <h5>Go to the Players tab at the top of this page once you sign in to save your favorites</h5>
+    </div>
+    <div class="col-12 col-md-4" id="middle-text">
+        <img src="../../static/images/jose-fernandez.jpeg" alt="Pitcher" id="pitcher-image">
+        <h4>Pitchers</h4>
+        <p>
+            We have all the pitchers!
+        </p>
+    </div>
+    <div class="col-12 col-md-4" id="middle-text">
+        <img src="../../static/images/fernando-tatis.jpeg" alt="Infielder" id="infielder-image">
+        <h4>Infielders</h4>
+        <p>
+            We have all the infielders!
+        </p>
+    </div>
+    <div class="col-12 col-md-4" id="middle-text">
+        <img src="../../static/images/mike-trout-1.jpeg" alt="Outfielder" id="outfielder-image">
+        <h4>Outfielders</h4>
+        <p>
+            We have all the outfielders!
+        </p>
+    </div>
+</section>
+<!-- End of features -->
+
+<div class="footer-dark">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 item text">
+                    <h3 style="text-align: center;">Rosenbaum Inc.</h3>
+                    <p>We specialize in getting you the most up to date baseball statistics that you can find.</p>
+                    <p>Stay tuned, as we will be moving into other sports as well.</p>
+                    <p class="copyright">Rosenbaum Inc. © 2018</p>
+                </div>
+        </div>
+    </footer>
+</div>
+{% endblock content %}

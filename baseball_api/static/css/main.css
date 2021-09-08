@@ -1,0 +1,224 @@
+body{
+    background-color: whitesmoke;
+}
+
+/* Nav styles */
+.ct-nav{
+    display: flex;
+    justify-content: center;
+}
+
+/* Target Main Logo Image */
+.ct-nav img{
+    width: 25%;
+    max-width: 100%;
+    margin-left: 2px;
+}
+
+ul#horizontal-list{
+    min-width: 55vw;
+    list-style: none;
+    padding-top: 2.4vw;
+}
+
+#horizontal-list li, #horizontal-list a{
+    display: inline;
+    text-decoration: none;
+    padding: 0.5vw;
+    color: black;
+} 
+
+#horizontal-list a:nth-last-child(1){
+    border: 2px solid blue;
+    border-radius: 11px;
+    margin-right: .02vw;
+}
+
+
+/* End of Nav Styles0 */
+
+/* Start of Header/Hero Section */
+#header-text{
+    padding: 10vh;
+}
+
+#btn-text{
+    text-decoration: none;
+    color: white;
+}
+
+.header-image{
+    width: 100%;
+    padding-top: 5vh;
+}
+/* End of Header/Hero Section */
+
+/* Start of Middle Section */
+#middle-text{
+    text-align: center;
+    padding: 5vh;
+}
+
+#middle-section{
+    margin: 5vw;
+}
+#middle-text h2{
+    padding: 1.5vw;
+}
+
+#pitcher-image, #infielder-image, #outfielder-image{
+    margin-bottom: 10px;
+    margin: auto;
+    height: 50vh;
+    width: 25vw;
+}
+
+
+/* End of Features */
+
+/* Start of Community */
+#drone-image{
+    width: 50%;
+    max-width: 75%;
+    margin-left: 3vw;
+}
+/* End of community */
+
+
+
+
+/* Background image of signin and signup */
+.body{
+    background-image: url(https://images.unsplash.com/photo-1572003818138-19cf96ee15e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* On form.html */
+.form-padding{
+    padding-top: 10px;
+}
+
+/* #form-button{
+    padding-top: 20px;
+} */
+
+/* Start of Footer */
+.footer-text-flex{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vw;
+}
+
+/* Table in the PLayers Section */
+.table{
+    padding: 50px 50px;
+}
+
+
+#footer-logo{
+    width: 100%;
+    max-width: 100%;
+}
+
+#footer{
+    margin-top: 20vh;
+}
+
+.footer-sign{
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Footer from the website */
+.footer-dark {
+    padding:50px 0;
+    color:#f0f9ff;
+    background-color:#282d32;
+  }
+  
+  .footer-dark h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+  }
+  
+  .footer-dark ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  
+  .footer-dark ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity:0.8;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+      text-align:center;
+      padding-bottom:20px;
+    }
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom:36px;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item.text {
+      margin-bottom:0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity:0.6;
+    margin-bottom:0;
+  }
+  
+  .footer-dark .item.social {
+    text-align:center;
+  }
+  
+  @media (max-width:991px) {
+    .footer-dark .item.social {
+      text-align:center;
+      margin-top:20px;
+    }
+  }
+  
+  .footer-dark .item.social > a {
+    font-size:20px;
+    width:36px;
+    height:36px;
+    line-height:36px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+    margin:0 8px;
+    color:#fff;
+    opacity:0.75;
+  }
+  
+  .footer-dark .item.social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-dark .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.3;
+    font-size:13px;
+    margin-bottom:0;
+  }

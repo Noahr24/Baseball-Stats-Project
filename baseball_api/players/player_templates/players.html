@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>In this table, you can pull up the stats of the fielders</h1>
+</div>
+
+{% include 'stats_form.html' %}
+<div class="col-md-12 table">
+    <table class="table">
+        <thead >
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Position</th>
+                <th scope="col">Team</th>
+                <th scope="col">AB</th>
+                <th scope="col">H</th>
+                <th scope="col">HR</th>
+                <th scope="col">BA</th>
+                <th scope="col">R</th>
+                <th scope="col">RBI</th>
+                <th scope="col">SB</th>
+                <th scope="col">OBP</th>
+                <th scope="col">SLG</th>
+                <th scope="col">OPS</th>
+                <th scope="col">OPS+</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <h1>In this table, you can pull up the stats of the Pitchers</h1>
+</div>
+
+{% include 'stats_form.html' %}
+
+<div class="col-md-12 table">
+    <table class="table">
+        <thead >
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Position</th>
+                <th scope="col">Team</th>
+                <th scope="col">W</th>
+                <th scope="col">L</th>
+                <th scope="col">ERA</th>
+                <th scope="col">G</th>
+                <th scope="col">GS</th>
+                <th scope="col">SV</th>
+                <th scope="col">IP</th>
+                <th scope="col">SO</th>
+                <th scope="col">BB</th>
+                <th scope="col">WHIP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock content %}

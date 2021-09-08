@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+<!-- Start of the Block Content -->
+
+
+{% with messages = get_flashed_messages(with_categories = true) %}
+    {% if messages %}
+        {% for cat,msg in messages %}
+            {% if cat == 'create-success' %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ msg }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% elif cat == 'auth-fail' %}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ msg }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+
+    <h1 class="coll-md-2 offset-md-4">Sign In</h1>
+{% include 'form.html' %}
+{% endblock content %}
+
+
+</body>

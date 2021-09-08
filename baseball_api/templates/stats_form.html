@@ -1,0 +1,16 @@
+<div class="row">   
+    <div class="col-md-2 offset-md-4">
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                <fieldset class="form-padding">
+                    {{ form.name.label }}
+                    {{ form.name(class = "form-control", placeholder = "Enter Player Name") }}
+                </fieldset>
+                <fieldset class="form-padding">
+                {{ form.submit_button(class = "btn btn-primary") }}
+                </fieldset>
+            </div>
+        </form>
+    </div>
+</div> 
