@@ -8,6 +8,7 @@ from .api.routes import api
 from flask_cors import CORS
 from .helpers import JSONEncoder
 from .players.routes import team
+from .pitchers.routes import pitchers
 
 
 
@@ -26,6 +27,7 @@ app.register_blueprint(site)
 app.register_blueprint(auth)
 app.register_blueprint(api)
 app.register_blueprint(team)
+app.register_blueprint(pitchers)
 CORS(app)
 
 app.json_encoder = JSONEncoder

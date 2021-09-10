@@ -46,7 +46,7 @@ def get_player(current_user_token, id):
         return jsonify({'message': 'That player is not in our database'})
 
 
-
+# This is for updating players
 @api.route('/players/<id>', methods = ['POST'])
 @token_required
 def update_player(current_user_token, id):
@@ -65,6 +65,7 @@ def update_player(current_user_token, id):
         jsonify({'message': 'That player is not in our database'})
 
 
+# This is for deleting players
 @api.route('/players/<id>', methods = ['DELETE'])
 @token_required
 def delete_player(current_user_token, id):

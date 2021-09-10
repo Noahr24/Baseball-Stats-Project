@@ -5,10 +5,10 @@ from baseball_api.forms import Player
 import json
 import pprint
 
-team = Blueprint('team', __name__, template_folder='player_templates')
+pitchers = Blueprint('pitchers', __name__, template_folder='pitcher_templates')
 
 
-@team.route('/players', methods=['GET', 'POST'])
+@pitchers.route('/pitchers', methods=['GET', 'POST'])
 @login_required
 def players():
     form = Player()
@@ -59,17 +59,7 @@ def players():
         data.append(obp)
         data.append(slg)
         
+        r = requests.get(f"http://lookup-service-prod.mlb.com/json/named.sport_career_pitching.bam?league_list_id='mlb'&game_type='R'&player_id={player_id}", headers=headers)
 
 
-    return render_template('players.html', form=form, data=data)
-
-
-
-
-
-
-
-
-
-
-
+    return render_template('pitchers.html', form=form, data=data)

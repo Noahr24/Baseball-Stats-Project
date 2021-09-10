@@ -2,44 +2,21 @@ body{
     background-color: whitesmoke;
 }
 
-/* Nav styles */
-.ct-nav{
-    display: flex;
-    justify-content: center;
+#nav-title{
+  padding-left: 25px;
 }
 
-/* Target Main Logo Image */
-.ct-nav img{
-    width: 25%;
-    max-width: 100%;
-    margin-left: 2px;
-}
-
-ul#horizontal-list{
-    min-width: 55vw;
-    list-style: none;
-    padding-top: 2.4vw;
-}
-
-#horizontal-list li, #horizontal-list a{
-    display: inline;
-    text-decoration: none;
-    padding: 0.5vw;
-    color: black;
-} 
-
-#horizontal-list a:nth-last-child(1){
-    border: 2px solid blue;
-    border-radius: 11px;
-    margin-right: .02vw;
-}
-
-
-/* End of Nav Styles0 */
-
-/* Start of Header/Hero Section */
+/* Start of the Top half of Index */
 #header-text{
-    padding: 10vh;
+    padding: 6vh;
+}
+
+#h1{
+  font-size: 80px;
+}
+
+#h2text{
+  padding-top: 50px;
 }
 
 #btn-text{
@@ -47,11 +24,25 @@ ul#horizontal-list{
     color: white;
 }
 
+#color{
+  color: white;
+}
+
 .header-image{
     width: 100%;
-    padding-top: 5vh;
+    padding-top: 10vh;
 }
-/* End of Header/Hero Section */
+
+#byu{
+  width: 100%;
+  padding-top: 200px;
+}
+
+#byu-text{
+  padding-top: 200px;
+}
+/* End of the Top half of Index */
+
 
 /* Start of Middle Section */
 #middle-text{
@@ -72,27 +63,7 @@ ul#horizontal-list{
     height: 50vh;
     width: 25vw;
 }
-
-
-/* End of Features */
-
-/* Start of Community */
-#drone-image{
-    width: 50%;
-    max-width: 75%;
-    margin-left: 3vw;
-}
-/* End of community */
-
-
-
-
-/* Background image of signin and signup */
-.body{
-    background-image: url(https://images.unsplash.com/photo-1572003818138-19cf96ee15e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+/* End of Middle Section */
 
 
 /* On form.html */
@@ -100,35 +71,10 @@ ul#horizontal-list{
     padding-top: 10px;
 }
 
-/* #form-button{
-    padding-top: 20px;
-} */
-
-/* Start of Footer */
-.footer-text-flex{
-    display: flex;
-    flex-direction: column;
-    margin-top: 3vw;
-}
 
 /* Table in the PLayers Section */
 .table{
     padding: 50px 50px;
-}
-
-
-#footer-logo{
-    width: 100%;
-    max-width: 100%;
-}
-
-#footer{
-    margin-top: 20vh;
-}
-
-.footer-sign{
-    color: black;
-    text-decoration: none;
 }
 
 

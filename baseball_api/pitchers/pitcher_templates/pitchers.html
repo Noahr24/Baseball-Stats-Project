@@ -1,39 +1,39 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 <div class="container offset-md-1" style="padding-top: 30px;">
-    <h1>Career Hitting Statistics</h1>
+    <h1>Career Pitching Statistics</h1>
 </div>
 
-<!-- Setting up the form on the page -->
+<!-- Thiis putting in the form -->
 {% include 'stats_form.html' %}
 
 
-<!-- Setting up the table -->
+<!-- Start of the Table -->
 <div class="col-md-12 table" >
     <table class="table">
         <thead >
             <tr>
                 <th scope="col">Name</th>
                 <th scope="col">Position</th>
-                <th scope="col">AB</th>
-                <th scope="col">H</th>
-                <th scope="col">HR</th>
-                <th scope="col">BA</th>
-                <th scope="col">R</th>
-                <th scope="col">RBI</th>
-                <th scope="col">SB</th>
-                <th scope="col">OBP</th>
-                <th scope="col">SLG</th>
+                <th scope="col">W</th>
+                <th scope="col">L</th>
+                <th scope="col">ERA</th>
+                <th scope="col">G</th>
+                <th scope="col">GS</th>
+                <th scope="col">SV</th>
+                <th scope="col">IP</th>
+                <th scope="col">SO</th>
+                <th scope="col">WHIP</th>
             </tr>
         </thead>
         <tbody>
             <tr>
             </tr>
             <tr>
-<!-- This is where the data is passed in to the correct spots -->
 
+
+                <!-- This is where the data from the API populates -->
                 <th scope="row">{% print(data[0]) %}</th>
                 <td> {% print(data[1]) %}</td>
                 <td> {% print(data[2]) %}</td>
@@ -45,12 +45,10 @@
                 <td> {% print(data[8]) %}</td>
                 <td> {% print(data[9]) %}</td>
                 <td> {% print(data[10]) %}</td>
-                <td> {% print(data[11]) %}</td>
             </tr>
         </tbody>
     </table>
 </div>
-
 
 
 {% endblock content %}
