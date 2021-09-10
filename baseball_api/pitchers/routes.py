@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request
 from flask_login import login_required
 import requests
+from requests.sessions import extract_cookies_to_jar
 from baseball_api.forms import Player
 import json
 import pprint
@@ -28,36 +29,36 @@ def players():
         response1 = requests.get(f"http://lookup-service-prod.mlb.com/json/named.player_info.bam?sport_code='mlb'&player_id={player_id}", headers=headers)
 
 
-        # This is the API call to get hitting stats
-        r = requests.get(f"http://lookup-service-prod.mlb.com/json/named.sport_career_hitting.bam?league_list_id='mlb'&game_type='R'&player_id={player_id}", headers=headers)
+        # This is the API call to get Pitching stats
+        r = requests.get(f"http://lookup-service-prod.mlb.com/json/named.sport_career_pitching.bam?league_list_id='mlb'&game_type='R'&player_id={player_id}", headers=headers)
         
 
         # This is setting the API info to a variable for each stat that is wanted
         player_name = response1.json()['player_info']['queryResults']['row']["name_display_first_last_html"]
         player_position = response1.json()['player_info']['queryResults']['row']["primary_position_txt"]
-        at_bat = r.json()['sport_career_hitting']['queryResults']["row"]['ab']
-        h = r.json()['sport_career_hitting']['queryResults']["row"]['h']
-        hr = r.json()['sport_career_hitting']['queryResults']["row"]['hr']
-        ba = r.json()['sport_career_hitting']['queryResults']["row"]['avg']
-        runs = r.json()['sport_career_hitting']['queryResults']["row"]['r']
-        rbi = r.json()['sport_career_hitting']['queryResults']["row"]['rbi']
-        sb = r.json()['sport_career_hitting']['queryResults']["row"]['sb']
-        obp = r.json()['sport_career_hitting']['queryResults']["row"]['obp']
-        slg = r.json()['sport_career_hitting']['queryResults']["row"]['slg']
+        w = r.json()['sport_career_pitching']['queryResults']["row"]['w']
+        l = r.json()['sport_career_pitching']['queryResults']["row"]['l']
+        era = r.json()['sport_career_pitching']['queryResults']["row"]['era']
+        g = r.json()['sport_career_pitching']['queryResults']["row"]['g']
+        gs = r.json()['sport_career_pitching']['queryResults']["row"]['gs']
+        sv = r.json()['sport_career_pitching']['queryResults']["row"]['sv']
+        ip = r.json()['sport_career_pitching']['queryResults']["row"]['ip']
+        so = r.json()['sport_career_pitching']['queryResults']["row"]['so']
+        whip = r.json()['sport_career_pitching']['queryResults']["row"]['whip']
 
 
         # This is appending all of the API info into data so that it can be displayed on the HTML
         data.append(player_name)
         data.append(player_position)
-        data.append(at_bat)
-        data.append(h)
-        data.append(hr)
-        data.append(ba)
-        data.append(runs)
-        data.append(rbi)
-        data.append(sb)
-        data.append(obp)
-        data.append(slg)
+        data.append(w)
+        data.append(l)
+        data.append(era)
+        data.append(g)
+        data.append(gs)
+        data.append(sv)
+        data.append(ip)
+        data.append(so)
+        data.append(whip)
         
         r = requests.get(f"http://lookup-service-prod.mlb.com/json/named.sport_career_pitching.bam?league_list_id='mlb'&game_type='R'&player_id={player_id}", headers=headers)
 

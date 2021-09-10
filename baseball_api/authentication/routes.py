@@ -18,6 +18,10 @@ def signup():
         db.session.add(new_user)
         db.session.commit()
         flash(f'Welcome to the Big Leagues: {email}', 'create-success')
+
+        
+
+
         return redirect(url_for('auth.signin'))
 
     return render_template('signup.html', form = form)
